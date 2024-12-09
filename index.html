@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Norrify</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Norrify</h1>
+    <p>Your one-stop shop for all your Chuck Norris fact illustrating needs</p>
+    <label for="category">Illustrate your fact:</label>
+    <select id="category" name="category">
+      <option value="cats">Give me cats!</option>
+      <option value="random">Give me a random image!</option>
+    </select>
+    <button id="norrifyButton">Norrify!</button>
+    <div id="imageContainer" class="imageContainer">
+      <img id="randomImage" alt="Random Image">
+      <div id="quoteContainer" class="quoteContainer">
+        <p id="quoteText"></p>
+      </div>
+    </div>
+  </div>
+  <div class = "boxOfDarkness">
+    <button id = "darknessToggle"><img src ="chuckHimself.png" alt = "Chuck Norris's pixellated head"></button>
+    <p>Click on Chuck to toggle dark mode</p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

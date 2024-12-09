@@ -1,0 +1,142 @@
+:root {
+    --primary: #3498db;
+    --secondary: #2ecc71;
+    --background: #f4f4f4;
+    --font: #333;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--font);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .container {
+    text-align: center;
+    max-width: 800px;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+  }
+  
+  select, button {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 20px;
+  }
+  
+  button {
+    background-color: var(--primary);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: var(--secondary);
+  }
+  
+  #imageContainer {
+    display: none; /* Initially hidden */
+    position: relative;
+    margin-top: 20px;
+    transition: all 1s ease;
+  }
+  
+  #randomImage {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    opacity: 0; /* start invisible */
+    transform: scale(0); /* start small */
+    transition: opacity 1s ease, transform 1s ease; /* smooth fade-in and scale-up */
+  }
+  
+  #quoteContainer {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    right: 10%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    opacity: 0; 
+    transition: opacity 1s ease; 
+  }
+
+  /* visibility class settings */
+  
+  #imageContainer.visible {
+    display: block; 
+  }
+
+/* light/dark toggle */
+
+#darknessToggle {
+    transition: transform 1s ease-in-out; 
+    background-color: transparent;
+    padding: none;
+    border: none;
+    margin-right: 5px;
+}
+
+/* add animation on click  */
+#darknessToggle.clicked {
+  transform: translateX(300px) rotateZ(720deg);
+}
+
+body {
+  transition: background-color 0.3s, color 0.3s; 
+}
+
+body.darkMode {
+  background-color: #333;
+  color: white;
+}
+
+.boxOfDarkness {
+  width: 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.boxOfDarkness p {
+  white-space: nowrap; 
+  margin: 0; 
+}
+
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 1.5rem;
+    }
+    
+    select, button {
+      font-size: 1rem;
+      width: 80%;
+    }
+
+    .boxOfDarkness {
+      width: auto;
+      flex-wrap: nowrap;
+    }
+  }
+  
